@@ -233,6 +233,32 @@ footer .wrap{border-top:1px solid rgba(243,236,233,.14);padding-top:20px;display
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 22px 22px}
 .proof-grid img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff}
 
+/* Role-play */
+.roleplay{background:var(--surface);border-block:1px solid var(--line)}
+.rp-list{display:flex;flex-direction:column;gap:16px}
+.rp-card{border:1px solid var(--line);border-radius:18px;background:var(--bg);overflow:hidden}
+.rp-card summary{cursor:pointer;list-style:none;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.rp-card summary::-webkit-details-marker{display:none}
+.rp-card summary::after{content:"Ver conversación +";font-family:var(--f-mono);font-size:12px;color:var(--coral);white-space:nowrap}
+.rp-card[open] summary::after{content:"Ocultar –"}
+.rp-head{display:flex;flex-direction:column;gap:6px;min-width:0}
+.rp-head .label{margin:0}
+.rp-head h3{font-size:22px;font-weight:700}
+.rp-head p{margin:0;color:var(--muted);font-size:15px}
+.rp-score{display:flex;flex-wrap:wrap;gap:8px}
+.rp-score span{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;padding:6px 10px;border-radius:999px;background:rgba(19,96,92,.10);color:var(--teal);font-weight:600;white-space:nowrap}
+.rp-body{padding:0 24px 26px}
+.chat-legend{display:flex;gap:18px;margin:0 0 12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+.chat-legend span{display:inline-flex;align-items:center;gap:6px}
+.chat-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chat-legend .me i{background:var(--teal)}
+.chat-legend .them i{background:var(--bg);border:1px solid var(--muted)}
+.chat{display:flex;flex-direction:column;gap:10px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;max-height:560px;overflow-y:auto}
+.bubble{max-width:82%;padding:11px 15px;border-radius:16px;font-size:14.5px;line-height:1.45;margin:0}
+.bubble.setter{align-self:flex-end;background:var(--teal);color:#fff;border-bottom-right-radius:4px}
+.bubble.lead{align-self:flex-start;background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px;color:var(--ink)}
+@media (max-width:600px){.bubble{max-width:92%}.rp-card summary{padding:18px}}
+
 /* Skills: 2x2 */
 .skills.four{grid-template-columns:repeat(2,1fr)}
 .skill.s4 .ico{background:rgba(19,96,92,.12);color:var(--teal)}
@@ -368,6 +394,192 @@ footer .wrap{border-top:1px solid rgba(243,236,233,.14);padding-top:20px;display
         <li><div class="dot">03</div><h3>Objeciones</h3><p>Escucho, resuelvo dudas y genero confianza.</p></li>
         <li><div class="dot">04</div><h3>Agendamiento</h3><p>Llevo al prospecto calificado a una cita con el closer.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="roleplay" id="roleplays">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Práctica en vivo</p>
+        <h2>Role-plays de prospección, de principio a cierre</h2>
+        <p class="lede">Simulaciones de conversación por WhatsApp que grabé para practicar y pulir mi guion en distintos nichos: desde el primer mensaje de conexión hasta la cita agendada con el closer.</p>
+      </div>
+      <div class="rp-list">
+        <details class="rp-card" open>
+          <summary>
+            <div class="rp-head">
+              <p class="label">Nicho: fitness y hábitos &middot; cuenta Alexa Fitness</p>
+              <h3>De un CTA de cambio a la cita agendada</h3>
+              <p>Lead (Brayan) responde a un anuncio sobre bajar de peso. Conexión, descubrimiento del dolor, manejo de objeción de precio y agendamiento por Calendly.</p>
+            </div>
+            <div class="rp-score"><span>Mensaje de conexión 9/10</span><span>Dirección y detección de necesidad 9/10</span><span>Presentación de oferta 9/10</span><span>Agenda y objeciones 9/10</span></div>
+          </summary>
+          <div class="rp-body">
+            <div class="chat">
+          <div class="chat-legend"><span class="me"><i></i>Katty (setter)</span><span class="them"><i></i>Lead (simulado)</span></div>
+          <p class="bubble setter">Hola Brayan, gracias por escribir. Cuando alguien llega con intención de cambio, suele haber algo que ya no quiere seguir tolerando en su día a día. ¿Qué es lo que más te está incomodando ahora mismo?</p>
+          <p class="bubble lead">Quiero bajar de peso y no sé cómo realmente</p>
+          <p class="bubble setter">Te entiendo, Brayan, sentirse así no es fácil, y la mayoría del tiempo suele venir de algo que se fue acumulando sin darte cuenta. Para entender mejor tu situación, ¿qué es lo que más se te complica cuando intentas bajar de peso?</p>
+          <p class="bubble lead">La comida jaja, me es muy difícil organizarme y entender bien. Porque las dietas restrictivas no me sirvieron</p>
+          <p class="bubble setter">Jaja no te preocupes, eso es súper normal que pase, después de probar dietas que solo generan más presión, a muchos les queda una sensación de caos con la comida. ¿En qué situaciones sientes que más se te desordena todo?</p>
+          <p class="bubble lead">Puedo aguantar ciertos días comiendo bien, pero llega un punto que me canso y como algo o salgo con amigos, y me termino arruinando el progreso</p>
+          <p class="bubble setter">Lo que me comentas es muy común, Brayan: sostienes unos días, pero cuando aparece el cansancio o la cabeza se satura, cualquier salida termina rompiendo el ritmo. ¿Qué es lo que sientes que más te dispara ese quiebre: el cansancio, el hambre acumulada o la sensación de &ldquo;ya fue&rdquo;?</p>
+          <p class="bubble lead">Sí, el cansancio</p>
+          <p class="bubble setter">Entiendo por qué lo sientes así, cuando el cansancio ya está encima, cualquier intento de orden se vuelve pesado. Para ubicar mejor cómo te afecta en el día a día, ¿tu rutina suele tener algo de movimiento o pasas la mayor parte del tiempo sentado?</p>
+          <p class="bubble lead">Paso mayor tiempo moviéndome porque mi trabajo es como gerente en una empresa, entonces estoy como loco</p>
+          <p class="bubble setter">Claro, con un día tan movido es normal que el cuerpo llegue agotado y la comida quede en segundo plano; cuando la energía no alcanza, es difícil sostener cualquier orden. ¿Dirías que ese cansancio viene más por la intensidad del trabajo o por cómo se te acomodan los horarios durante el día?</p>
+          <p class="bubble lead">Sí, exacto, por el trabajo</p>
+          <p class="bubble setter">Es súper entendible, el trabajo te exige tanto que es normal que el cuerpo quede sin energía y la comida termine siendo una decisión automática más que algo pensado. Justamente eso es lo que se puede trabajar para que no dependas del cansancio ni del ritmo del día. ¿Quieres que te explique cómo se ordena eso?</p>
+          <p class="bubble lead">Sí, claro, por favor</p>
+          <p class="bubble setter">Genial, te explico sencillo. Si tu mañana arranca intensa, lo que se hace es ubicar un par de momentos clave donde recuperes energía antes de que aparezca ese bajón que te hace comer por impulso: son ajustes simples en horarios y en qué puedes elegir en esos momentos, para que incluso con el trabajo a mil puedas mantener orden sin pensarlo demasiado. Para no quedarnos solo en teoría, ¿te gustaría que te muestre cómo se vería esto adaptado a tu día real?</p>
+          <p class="bubble lead">Correcto</p>
+          <p class="bubble setter">Genial. Para poder ajustarlo bien a tu ritmo y que realmente te funcione incluso en días pesados, necesito entender un par de detalles de tu mañana, y con eso ya puedo mostrarte la versión exacta de cómo se ordenaría en tu caso. ¿Cómo suele arrancar tu día entre que te levantas y llegas al trabajo?</p>
+          <p class="bubble lead">Pues desayuno y voy en mi auto</p>
+          <p class="bubble setter">Te entiendo, con el ritmo que llevas es muy común terminar desayunando en el auto, sobre todo cuando la mañana viene apretada. El tema es que ahí tu cuerpo arranca sin terminar de activarse, y eso después se nota en esos bajones que te hacen comer por impulso más tarde. Si quieres, puedo mostrarte una forma sencilla de acomodar ese inicio para que te rinda mejor sin cambiar tu rutina. ¿Te gustaría que te lo deje claro según tu ritmo y veamos cuál sería la mejor opción?</p>
+          <p class="bubble lead">Sí, claro</p>
+          <p class="bubble setter">Perfecto. Con lo que me mencionaste ya puedo ubicar mejor cómo se mueve tu mañana y dónde podríamos hacer un ajuste que te dé más estabilidad durante el día. Lo más práctico es revisarlo juntos y dejarlo claro sin dar vueltas. ¿Coordinamos un espacio breve y te lo muestro aplicado a tu día?</p>
+          <p class="bubble lead">Sí, por favor</p>
+          <p class="bubble setter">Perfecto, para avanzar bien y dejarte todo listo, lo siguiente es elegir un momento para verlo con calma y armarlo de forma concreta. ¿Qué día te conviene mejor y lo agendamos?</p>
+          <p class="bubble lead">Hoy puedo. Como en 3 horas</p>
+          <p class="bubble setter">Perfecto, en tres horas estoy disponible, lo dejamos reservado y lo vemos con calma.</p>
+          <p class="bubble lead">¿No tengo que agendar por ningún lado?</p>
+          <p class="bubble setter">Sí, de hecho ya te iba a pasar el link, así te queda guardado en tu calendario: <em>[link de Calendly]</em>. Marcas ese horario y listo.</p>
+          <p class="bubble lead">(deja el mensaje en visto)</p>
+          <p class="bubble setter">Brayan, paso por acá nada más para asegurarme de que seguimos con el mismo horario que me mencionaste. Si te sigue funcionando, lo marcas ahí y listo.</p>
+          <p class="bubble lead">Hola, sí sí, super. ¿Esto qué precio tiene?</p>
+          <p class="bubble setter">Es súper normal que quieras tener claridad con el precio. El valor cambia según tus objetivos y el nivel de apoyo que necesites, y prefiero darte un número que realmente se ajuste a tu situación y no algo genérico que no te aporte claridad. ¿Quieres que lo revisemos juntos en la llamada para darte el precio exacto?</p>
+          <p class="bubble lead">Dale. Ahí estuve viendo que la llamada no es con vos, ¿cómo sería eso?</p>
+          <p class="bubble setter">Sí, la llamada inicial la hace alguien de mi equipo. Esa etapa es para revisar tu rutina, tus horarios bien detallados y en qué momentos se te cae la energía, así adaptamos el proceso a tu día real. Con eso armamos la estructura que después trabajas conmigo: cómo ordenar tus comidas sin depender de fuerza de voluntad y cómo bajar el cansancio mental para que tus decisiones sean más automáticas. Si te funciona, puedes marcar el horario que ya habíamos visto en el link y queda reservado.</p>
+          <p class="bubble lead">Genial, nos vemos</p>
+          <p class="bubble setter">Perfecto, entonces quedamos para ese horario. Cuando lo confirmes desde el link, la reserva queda cerrada y nos vemos en la llamada.</p>
+        </div>
+          </div>
+        </details>
+        <details class="rp-card">
+          <summary>
+            <div class="rp-head">
+              <p class="label">Nicho: escalamiento para coaches y creadores &middot; cuenta Pilar Ibañez</p>
+              <h3>Mensaje de conexión en frío a un creador (B2B)</h3>
+              <p>Contacto en frío con Íñigo, creador de contenido sobre energía y rendimiento, a partir de su propio contenido. Se descubre un dolor de gestión de equipo y se agenda llamada.</p>
+            </div>
+            <div class="rp-score"><span>Mensaje de conexión 9/10</span><span>Dirección y detección de necesidad 9/10</span><span>Presentación de oferta 9/10</span><span>Agenda y objeciones 9/10</span></div>
+          </summary>
+          <div class="rp-body">
+            <div class="chat">
+          <div class="chat-legend"><span class="me"><i></i>Katty (setter)</span><span class="them"><i></i>Lead (simulado)</span></div>
+          <p class="bubble setter">Hola Íñigo, estuve viendo tu contenido sobre energía y rendimiento físico para emprendedores. Algo que noto mucho es que, incluso con buenos hábitos, la carga mental y la falta de estructura diaria siguen afectando el rendimiento igual. ¿Cómo lo ves tú en los casos que acompañas?</p>
+          <p class="bubble lead">Sí, es complicado para algunos, depende mucho del contexto</p>
+          <p class="bubble setter">Totalmente, el contexto cambia muchísimo. Y algo que siempre me llama la atención es que cada profesional llega a estos temas desde experiencias muy distintas. En tu caso, ¿qué fue lo que te hizo interesarte tan a fondo por entender la energía y el rendimiento?</p>
+          <p class="bubble lead">Me di cuenta de que era mi pasión y me ayudaba a avanzar en mis objetivos</p>
+          <p class="bubble setter">Qué bueno eso, cuando algo se vuelve pasión y empieza a empujar objetivos, siempre hay un antes y un después. Me da curiosidad, ¿cómo fue que empezaste a integrar todo esto en tu día a día para que realmente te ayudara a avanzar?</p>
+          <p class="bubble lead">Más que nada por curiosidad, empecé a investigar</p>
+          <p class="bubble setter">Qué interesante, la mayoría de veces la curiosidad aparece cuando sentimos que hay algo que podría estar siendo más simple o más claro de lo que parece. ¿Te pasó algo así cuando empezaste a investigar?</p>
+          <p class="bubble lead">Sí, a veces es complicado cuando empezamos a sobrepensar las cosas</p>
+          <p class="bubble setter">Te entiendo, cuando empezamos a sobrepensar es porque hay algo que nos cuesta ver con claridad. En tu caso, ¿qué era lo que más te generaba esa sensación al principio?</p>
+          <p class="bubble lead">Hoy en día, todo lo que tiene que ver con la empresa y las personas</p>
+          <p class="bubble setter">Claro, cuando todo lo de la empresa y las personas empieza a ocupar tanto espacio, uno mismo nota que hay algo que no termina de encajar del todo. ¿En tu caso, qué era lo que más te hacía sentir esa sensación?</p>
+          <p class="bubble lead">Tener que intervenir tanto en cosas repetitivas</p>
+          <p class="bubble setter">Es muy común que pase eso: tener que intervenir tanto en cosas repetidas hace que muchas veces uno empiece a notar que el equipo depende más de lo que quisieras. ¿En qué momentos sentías más esa dependencia?</p>
+          <p class="bubble lead">Más que nada en tareas donde no soy experto, pero aun así tengo que estar encima por falta de rendimiento</p>
+          <p class="bubble setter">Cuando terminas involucrado en áreas donde no eres experto, se vuelve evidente que el equipo no está respondiendo al nivel que necesitas. ¿Qué es lo que más se te está repitiendo últimamente que te muestra esa falta de rendimiento?</p>
+          <p class="bubble lead">Se atrasan en ciertas cosas, a veces son consistentes, a veces no, entonces tengo que intervenir</p>
+          <p class="bubble setter">Tiene mucho sentido lo que dices: cuando ves que se atrasan y que la consistencia no se sostiene, es normal que termines entrando para que las cosas no se caigan. ¿Qué es lo que más te está generando internamente tener que estar encima así?</p>
+          <p class="bubble lead">Frustración jaja, pero estoy intentando solucionarlo</p>
+          <p class="bubble setter">Es súper válido sentirse frustrado; cuando la consistencia no se sostiene y te toca entrar para que no se atrasen, es normal que aparezca esa frustración, sobre todo porque estás cargando algo que no debería recaer tanto en ti. ¿En qué parte de todo esto sientes que esa frustración se hace más presente?</p>
+          <p class="bubble lead">Más que nada en la gestión del equipo</p>
+          <p class="bubble setter">Que la gestión del equipo sea lo que más te está afectando dice mucho del nivel de carga que estás sosteniendo para que todo avance; eso no solo cambia tu ritmo, también modifica cómo te posicionas en tu propio rol. ¿En qué parte del proceso estás viendo que esta falta de gestión está comprometiendo más los resultados?</p>
+          <p class="bubble lead">En la facturación y el rendimiento</p>
+          <p class="bubble setter">Cuando los números empiezan a moverse así, normalmente es porque hay una parte del sistema que dejó de funcionar con la coherencia que el proyecto necesita para sostener su ritmo. ¿En qué etapa del flujo estás viendo que esta variación está generando más ruido en la operación?</p>
+          <p class="bubble lead">Más que nada en mis agentes de venta</p>
+          <p class="bubble setter">Que justo sea tu equipo de ventas donde más se nota el impacto ya muestra que hay algo en la base del funcionamiento que no está acompañando el ritmo que tu operación necesita. Desde lo que estás viendo ahora, ¿qué parte del trabajo de tus agentes es la que más se está desalineando del nivel que necesitas?</p>
+          <p class="bubble lead">El rendimiento, ya te dije</p>
+          <p class="bubble setter">Por cómo se viene moviendo el rendimiento de tu equipo, se nota que hay una parte del sistema que no está sosteniendo el ritmo que tu operación necesita, y eso te termina pidiendo más presencia de la que debería. Casualmente, en eso es lo que trabajamos: ordenamos la estructura para que puedan resolver problemas solos, sostener el ritmo y liberar tu presencia del día a día; eso normalmente recupera entre $50,000 y $100,000 al año en eficiencia y estabilidad operativa. Si quieres, lo revisamos y te muestro exactamente dónde está hoy la fuga y cómo se corrige en tu operación. ¿Te gustaría que coordinemos un espacio para verlo con más claridad?</p>
+          <p class="bubble lead">Me interesa, claro</p>
+          <p class="bubble setter">Genial, para avanzar lo vemos en la llamada y así dejar todo claro sin dar vueltas. Yo tengo un hueco hoy por la tarde y otro mañana por la mañana. ¿Cuál de esos te queda mejor?</p>
+          <p class="bubble lead">Por la tarde, mejor sí</p>
+          <p class="bubble setter">Perfecto, entonces lo dejamos para esta tarde. ¿A las 6pm te parece?</p>
+          <p class="bubble lead">Dale</p>
+          <p class="bubble setter">Listo, por acá te paso el link <em>[Calendly]</em> para que confirmes. Cualquier duda me avisas y te ayudo con gusto.</p>
+          <p class="bubble lead">(deja el mensaje en visto)</p>
+          <p class="bubble setter">Íñigo, paso por acá solamente para confirmar lo que hablamos. ¿Seguimos pendientes para las 6pm? Cualquier cosa, si necesitarás un poco más de tiempo para que te acomodes, me puedes hacer saber, tengo un espacio a las 7pm. ¿Te parece?</p>
+          <p class="bubble lead">Hola, disculpa, estuve enredado con el trabajo. ¿Esto qué precio tiene?</p>
+          <p class="bubble setter">Entiendo que quieras tener claridad. En nuestro caso el costo no es fijo porque depende de lo que haya que ajustar en tu operación y del nivel actual del equipo; por eso primero vemos tu caso y con eso te doy un número real, no uno al aire que no te sirva. ¿Te parece si lo vemos en la llamada y te dejo el precio exacto según lo que necesites?</p>
+          <p class="bubble lead">Ok, perfecto. Ahí estuve viendo que la llamada no es con vos, ¿cómo sería eso?</p>
+          <p class="bubble setter">Correcto, la llamada no la tomo yo directamente. Para esa parte tengo a alguien del equipo que se dedica exclusivamente a las evaluaciones, así puedes ver todo en detalle con alguien que te guía paso a paso mientras yo sigo con la parte estratégica del proceso. ¿Quieres que te marque el horario y lo dejamos cerrado?</p>
+          <p class="bubble lead">Excelente, nos vemos</p>
+          <p class="bubble setter">Listo, recuerda usar el link para confirmar tu cita. ¡Nos vemos a las 6pm!</p>
+        </div>
+          </div>
+        </details>
+        <details class="rp-card">
+          <summary>
+            <div class="rp-head">
+              <p class="label">Nicho: marca personal y contenido &middot; moda masculina</p>
+              <h3>Conexión con una creadora de contenido</h3>
+              <p>Conversación con Momaht, creadora de contenido de moda masculina, hasta identificar su necesidad de un sistema de leads y agendar la llamada de cierre.</p>
+            </div>
+            <div class="rp-score"><span>Cita agendada &#10003;</span></div>
+          </summary>
+          <div class="rp-body">
+            <div class="chat">
+          <div class="chat-legend"><span class="me"><i></i>Katty (setter)</span><span class="them"><i></i>Lead (simulado)</span></div>
+          <p class="bubble setter">Hola Momaht, estuve viendo tu contenido y me llamó la atención cómo planteas la relación entre imagen, resultados sociales y desempeño profesional. ¿Qué es lo que estás priorizando hoy cuando trabajas ese cambio con tus clientes?</p>
+          <p class="bubble lead">Más que nada la atención personalizada</p>
+          <p class="bubble setter">Tiene mucho sentido priorizar la atención personalizada, sobre todo cuando buscas resultados profundos; me llamó la atención cómo lo integras dentro de tu método. ¿Qué parte del proceso es la que más presencia tuya requiere hoy?</p>
+          <p class="bubble lead">Ahora el contenido</p>
+          <p class="bubble setter">Te entiendo, el contenido es una parte que requiere mucha dedicación. ¿Qué tipo de mensajes o temas estás eligiendo ahora para conectar con tu comunidad?</p>
+          <p class="bubble lead">Más que nada todo lo que relaciona la moda masculina en 2026</p>
+          <p class="bubble setter">Súper bueno, la moda masculina en 2026 está siendo un tema fuerte para posicionarse. ¿Qué tipo de piezas dentro de ese contenido te están funcionando mejor a nivel engagement?</p>
+          <p class="bubble lead">Más que nada los pantalones holgados vs. los skinny jeans</p>
+          <p class="bubble setter">Súper interesante ese contraste, entre holgados y skinny siempre despierta opiniones fuertes. Más allá de la tendencia en sí, me interesa saber cómo decides qué temas llevar al contenido. ¿Qué te hace elegir un tema por encima de otro cuando estás creando?</p>
+          <p class="bubble lead">Voy viendo jaja, salen de mis ideas</p>
+          <p class="bubble setter">Eso está genial, cuando las ideas fluyen así de fácil el contenido se vuelve mucho más dinámico. ¿Cómo decides cuál de todas esas ideas termina siendo la que publicas?</p>
+          <p class="bubble lead">Las que más me gustan</p>
+          <p class="bubble setter">Tiene mucho sentido que lo hagas así, elegir las que más te gustan mantiene el contenido muy fiel a tu estilo. Y cuando trabajas desde lo que te vibra en el momento, ¿cómo haces para organizar todas esas ideas y que no se te queden temas buenos sin publicar?</p>
+          <p class="bubble lead">Me suelo inspirar viendo contenido de otros</p>
+          <p class="bubble setter">Está súper bueno inspirarse así, muchos creadores lo hacen. Cuando encuentras algo que te gusta, ¿cómo organizas esas ideas para que no dependan solo de lo que vas viendo en el día a día?</p>
+          <p class="bubble lead">Me organizo, básicamente suelo tener ideas de más</p>
+          <p class="bubble setter">Qué bueno que tengas tantas ideas, aunque a veces puede ser un arma de doble filo. ¿Cómo distingues cuáles realmente te acercan a lo que quieres lograr con tu marca y cuáles solo quedan como ideas sueltas?</p>
+          <p class="bubble lead">Tengo la identidad de mi marca bien definida, entonces filtro</p>
+          <p class="bubble setter">Qué interesante, ese filtro debe ayudarte un montón. Cuando lo usas, ¿cómo evalúas qué ideas te acercan a tus objetivos de negocio y cuáles quedan más en plano creativo?</p>
+          <p class="bubble lead">De la misma forma</p>
+          <p class="bubble setter">Eso está bueno, mantener un mismo criterio da estabilidad. ¿Cómo notas si ese filtro sigue siendo útil o si en algún punto te empieza a limitar?</p>
+          <p class="bubble lead">Como te comenté</p>
+          <p class="bubble setter">Claro, entiendo lo que dices. Y en tu día a día, ¿cómo te organizas para que el contenido no dependa de si tienes tiempo o no?</p>
+          <p class="bubble lead">Me suelo organizar, depende mucho del algoritmo</p>
+          <p class="bubble setter">Totalmente, y más allá del algoritmo, ¿cómo te das cuenta de que tu contenido está avanzando en la dirección que quieres?</p>
+          <p class="bubble lead">En base a si me atrae leads</p>
+          <p class="bubble setter">Claro, al final todos buscamos atraer leads. ¿Qué es lo que te hace decir que un lead es realmente bueno para tu marca y no solo alguien que llegó por un contenido viral?</p>
+          <p class="bubble lead">Si compra o no jaja</p>
+          <p class="bubble setter">Jajaja sí, ojalá todos compraran. Y antes de eso, ¿qué te ayuda a identificar si ese lead encaja con lo que tú ofreces y no solo llegó por curiosidad?</p>
+          <p class="bubble lead">Más que nada viendo su situación actual</p>
+          <p class="bubble setter">Totalmente, la situación del lead dice mucho. Para que lleguen los que realmente te sirven, ¿qué tomas en cuenta a la hora de construir tu mensaje?</p>
+          <p class="bubble lead">Conectar con la persona</p>
+          <p class="bubble setter">Conectar es súper importante. Cuando piensas en la persona ideal para tu marca, ¿qué características tiene alguien que realmente quieres atraer de forma constante?</p>
+          <p class="bubble lead">Comprometido y serio con el cambio</p>
+          <p class="bubble setter">El compromiso es fundamental, y ahí es donde tener un sistema claro cambia todo, porque te permite identificar rápido quién realmente está listo para avanzar. ¿Tú tienes algo así armado o lo vas viendo sobre la marcha?</p>
+          <p class="bubble lead">La verdad que no</p>
+          <p class="bubble setter">Es súper normal que pase eso: sin un sistema claro es difícil identificar señales reales y terminas dependiendo mucho de la intuición. Cuando empiezas a tener claridad sobre qué buscar y cómo detectarlo, cambia completamente la calidad de las conversaciones y de los leads. ¿Te gustaría tener más claridad en esa parte?</p>
+          <p class="bubble lead">Podría ser, sí</p>
+          <p class="bubble setter">Casualmente, a eso nos dedicamos: trabajamos 1 a 1 con creadores que quieren dejar de depender del algoritmo y de la intuición, y los ayudamos a tener claridad sobre su mensaje, definir a quién quieren atraer, identificar señales reales de compromiso y construir un sistema que les permita avanzar con personas que sí están listas. ¿Quieres que te cuente cómo se trabaja?</p>
+          <p class="bubble lead">Dale</p>
+          <p class="bubble setter">Para que te des una idea, con todo eso ordenado, los creadores con una base como la tuya suelen moverse entre $80K y $150K USD al año, y cuando alinean su mensaje con un sistema sólido, muchos terminan escalando a rangos aún más altos. Si quieres, lo revisamos y te muestro exactamente qué potencial real podrías estar alcanzando. ¿Te interesaría explorarlo un poco más?</p>
+          <p class="bubble lead">Me interesa, claro</p>
+          <p class="bubble setter">Perfecto, para verlo bien a detalle y entender tu caso puntual, lo mejor es revisarlo en una llamada, así puedo mostrarte exactamente dónde está tu mayor potencial y qué ajustes te darían resultados más rápidos. ¿Coordinamos un espacio y lo vemos con calma?</p>
+          <p class="bubble lead">Perfecto</p>
+          <p class="bubble setter">Te puedo ofrecer un espacio mañana a las 11:00 a.m. o, si te queda mejor, el lunes a las 2:00 p.m. Te dejo el link para que confirmes el que te funcione mejor: <em>[link de Calendly]</em>. ¿Te queda bien alguno de esos dos?</p>
+          <p class="bubble lead">(deja el mensaje en visto)</p>
+          <p class="bubble setter">Momaht, pasaba por acá para confirmar si alguna de las opciones que te di te funciona y así terminar de coordinar para revisar tu caso. ¿Te queda bien alguno de esos horarios?</p>
+          <p class="bubble lead">Sí, claro, disculpa. ¿Esto qué precio tiene?</p>
+          <p class="bubble setter">Entiendo totalmente que quieras tener claridad sobre los precios, es una pregunta súper válida, y justamente por eso revisamos cada caso antes, porque el valor depende mucho de lo que necesites y del nivel de acompañamiento que requiera tu proceso. Para darte detalles concretos, solo necesitaría que confirmes en el link el horario que te propuse. ¿Te queda bien hacerlo?</p>
+          <p class="bubble lead">Correcto. Ahí estuve viendo que la llamada no es con vos, ¿cómo sería eso?</p>
+          <p class="bubble setter">Correcto. Sí, la llamada la hace alguien de mi equipo que se encarga específicamente de analizar cada caso en detalle para darte un diagnóstico claro y recomendaciones precisas; yo igual acompaño todo el proceso, así que quedas en buenas manos. ¿Quieres confirmar el horario desde el link que te envié?</p>
+          <p class="bubble lead">Dale, ahí lo confirmo, nos vemos</p>
+          <p class="bubble setter">Perfecto, entonces, ¡nos vemos en la llamada!</p>
+        </div>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
